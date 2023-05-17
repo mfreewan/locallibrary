@@ -1,0 +1,24 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+  <h1>All Borrowed Books</h1>
+ 
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Borrower</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for borrowed in borrow %}
+       <tr>
+         <td>{{ borrowed.book }}</td>
+         <td>{{ borrowed.id }}</td>
+         <td>{{ borrowed.borrow}}</td>
+       </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

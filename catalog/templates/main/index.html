@@ -1,0 +1,25 @@
+{extends 'basic.html' %}
+
+{% block title %} <title> local lib </title> {% end block %}
+
+{% Block content %}
+
+<h1>welcome to our library</h1>
+
+<ul>
+    <li>
+        Book : {{num_book}}
+    </li>
+    <li>
+        Book instance :{{num_instance}}
+    </li>
+    <li>
+        Book instance available : {{num_instance_available}}
+    </li>
+    <li>
+        Author : {{num_Author}}
+    </li>
+
+</ul>
+
+{%end block %}

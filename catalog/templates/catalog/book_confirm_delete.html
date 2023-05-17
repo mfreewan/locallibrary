@@ -1,0 +1,14 @@
+<!-- @format -->
+
+{% extends "basic.html" %} {% block content %}
+
+<h1>Delete Book</h1>
+
+<p>Are You sure you want to delete this book {{ title }} ?</p>
+
+<form action="" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete." />
+</form>
+
+{% endblock %}

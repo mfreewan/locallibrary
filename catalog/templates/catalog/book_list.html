@@ -1,0 +1,20 @@
+<!-- @format -->
+
+{% extends "basic.html" %} {% block content %}
+<h1>Book List</h1>
+{% if book_list %}
+<ul>
+  {% for book in book_list %}
+  <li>
+    <a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
+    ({{book.author}})
+  </li>
+  {% endfor %}
+</ul>
+<div>
+  <button><a href="{% url 'book-create'%}">Create a new Book </a></button>
+</div>
+{% else %}
+<p>There are no books in the library.</p>
+
+{% endif %} {% endblock %}

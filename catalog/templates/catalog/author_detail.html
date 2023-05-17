@@ -1,0 +1,22 @@
+{% extends "basic.html" %}
+
+{% block content %}
+  <h1>Title: {{ book.title }}</h1>
+
+  <p><strong>Author:</strong> <a href="">{{ book.author }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Author Name:</strong> {{ author.first_name }} {{author.last_name}}</p>
+  <p><strong>Date of Birth:</strong> {{ author.date_of_birth }}</p>
+  <p><strong>Date of Death:</strong> {{ author.date_of_death }}</p>
+
+  <div>
+    <button><a href="{% url 'author-update' author.id%}">Update </a></button>
+    <button><a href="{% url 'author-delete' author.id%}">Delete </a></button>
+
+
+
+
+  </div>
+ 
+
+
+{% endblock %}
